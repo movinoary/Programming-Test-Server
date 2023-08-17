@@ -1,0 +1,33 @@
+- module_item
+    o	nama_item:string,
+    o	unit:integer(11),
+    o	stok:integer(11),
+    o	harga_satuan:string,
+    o	barang:string
+    npx sequelize-cli model:generate --name module_item --attributes nama_item:string,unit:integer(11),stok:integer(11),harga_satuan:string,barang:string
+
+- module_customer
+    o	nama:string,
+    o	contact:string,
+    o	email:string,
+    o	alamat:string,
+    o	diskon:integer(11),
+    o	tipe_diskon:string,
+    o	ktp:string
+    npx sequelize-cli model:generate --name module_customer --attributes nama:string,contact:string,email:string,alamat:string,diskon:integer(11),tipe_diskon:string,ktp:string
+
+- module_sales
+    o	code_transaksi:string,
+    o	tanggal_transaksi:string,
+    o	customer:string,
+    o	id_item:string,
+    o	qty:integer(11),
+    o	total_diskon:string,
+    o	total_harga:integer(11),
+    o	total_bayar:integer(11),
+    npx sequelize-cli model:generate --name module_sales --attributes nama:string,contact:string,email:string,alamat:string,diskon:integer(11),tipe_diskon:string,ktp:string
+
+- sales_item
+    o	id_sales:string,
+    o	id_item:string,
+    npx sequelize-cli model:generate --name sales_item --attributes id_sales:string,id_item:string
